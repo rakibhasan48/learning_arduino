@@ -18,7 +18,7 @@ void setup() {
 }
 
 void loop() {
-  loopBinaryCount();
+  loopBinaryCount(16);
   delay(longDelay);
 }
 
@@ -67,8 +67,8 @@ int getPin(int num) {
   }
 }
 
-void loopBinaryCount() {
-  for (int i = 0; i < 16; i++) {
+void loopBinaryCount(int upTo) {
+  for (int i = 0; i < upTo; i++) {
     binaryCounter(i);
     delay(shortDelay);
     runOpOnAllPins(lightDown);
